@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        html{
+             background-color: rgb(70, 64, 64);
+             color: #333;
+        }
+
+        .container {
+            margin: 20px auto;
+            width: 400px;
+            padding: 30px;
+            border-radius: 10px;
+            background-color: #eee;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .form-item {
+            margin-bottom: 10px;
+        }
+
+        .txt {
+            width: 100%;
+            height: 40px;
+            outline: none;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            padding: 0 10px;
+            font-size: 14px;
+        }
+
+        .txt:focus {
+            border: 1px solid rgb(70, 66, 66);
+        }
+        select.txt{
+            height: 100px;
+            padding: 10px;
+        }
+
+        textarea.txt {
+            resize: none;
+            height: 100px;
+            padding: 10px;
+        }
+        button{
+            width: 150px;
+            height: 40px;
+            background-color: rgb(1, 136, 247);
+            border: none;
+            border-radius: 5px;
+            color: #eee;
+            font-size: 14px;
+        }
+        .left{
+            float: left;
+        }
+        .right{
+            float: right;
+        }
+        .clearFix::after{
+            content: "";
+            display: block;
+            clear: both;
+        }
+        .captcha{
+            width: 170px;
+        }
+        .title{
+            margin-right: 10px;
+        }
+        .title input{
+            margin-right: 10px;
+        }
+        .policy{
+            font-size: 12px;
+        }
+        .policy input{
+            vertical-align: -2px;
+        }
+        label span{
+            color: #aaa;
+        }
+        label input:checked~span {
+            color: #333;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="" class="container">
+        <h1>用户登陆</h1>
+        <div class="form-item "><input type="text" class="txt" placeholder="请输入11位手机号" maxlength="11"></div>
+        <div class="form-item clearFix"><input type="text" class="txt left captcha" placeholder="请填入验证码"><button type="button" class="right">发送验证码</button>
+        </div>
+        <div class="form-item"><input type="password" class="txt" placeholder="请输入密码"></div>
+        <div class="form-item"><input type="password" class="txt" placeholder="请再次确认密码"></div>
+        <div class="form-item"><select class="txt "  multiple>
+                <option value="">爱好1</option>
+                <option value="">爱好2</option>
+                <option value="">爱好3</option>
+                <option value="">爱好4</option>
+                <option value="">爱好5</option>
+                <option value="">爱好6</option>
+            </select></div>
+        <div class="form-item clearFix">
+            <div class="left title">性别</div>
+            <label for="" class="left">
+                <input type="radio" name="sex" value="male">
+                <span>男</span>
+            </label>
+            <label for="">
+                <input type="radio" name="sex" value="female">
+                <span>女</span>
+            </label>
+        </div>
+        <div>
+            <textarea class="txt">请输入个人简介</textarea>
+        </div>
+        <div class="form-item policy">
+            <label for="">
+                <input type="checkbox">
+                <span>同意</span>
+            </label>
+        </div>
+        <div class="form-item">
+            <button type="submit">立即注册</button>
+            <button type="reset">重置表单</button>
+        </div>
+    </form>
+
+</body>
+
+</html>
